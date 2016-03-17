@@ -130,7 +130,6 @@
 			var originals =
 				this.responseText
 				.split(/\r?\n/)
-				.filter(RegExp.prototype.test.bind(/\.ts$/))
 				.map(resolveURL.bind(null, manifest));
 
 			originals = originals.slice(originals.lastIndexOf(lastOriginal) + 1);
